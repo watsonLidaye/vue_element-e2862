@@ -6,6 +6,8 @@ import router from './router'
 import Element from 'element-ui'
 import axios from 'axios'
 import utill from './assets/js/util.js'
+import store from './vuex/store'
+import filter from './assets/js/utils/fitter.js'
 import '@/assets/css/cssrest.css'
 import '@/assets/css/public.css'
 
@@ -13,7 +15,8 @@ Vue.use(Element)
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
-Vue.prototype.utill = utill
+Vue.prototype.$utill = utill
+Vue.prototype.$store = store
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',
@@ -21,5 +24,6 @@ new Vue({
 	components: {
 		App
 	},
-	template: '<App/>'
+	template: '<App/>',
+	filters: filter,
 })

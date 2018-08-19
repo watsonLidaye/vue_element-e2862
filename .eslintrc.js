@@ -38,6 +38,7 @@ module.exports = {
     "no-multiple-empty-lines": [1, {
       "max": 2
     }], //空行最多不能超过2行
-    "no-trailing-spaces": 0
+    "no-trailing-spaces": 0,
+    "spaced-comment": 0,
   }
 }
