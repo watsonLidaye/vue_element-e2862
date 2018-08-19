@@ -40,5 +40,6 @@ module.exports = {
     }], //空行最多不能超过2行
     "no-trailing-spaces": 0,
     "spaced-comment": 0,
+    "no-mixed-spaces-and-tabs": 0
   }
 }

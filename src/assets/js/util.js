@@ -1,9 +1,13 @@
-var config = require('@/assets/js/config')
-var api = require('@/assets/js/utils/api.js')
-var version = '1.0.0'
+// var config = require('@/assets/js/config')
+// var common = require('@/assets/js/common')
+// var api = require('@/assets/js/utils/api.js')
+import config from '@/assets/js/config'
+import common from '@/assets/js/common'
+import api from '@/assets/js/utils/api.js'
 
-module.exports = {
+
+export default {
 	api,
 	config,
-	version
+	common
 }
