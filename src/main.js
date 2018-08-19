@@ -5,7 +5,9 @@ import App from './App'
 import routes from './router/index'
 import VueRouter from 'vue-router'
 import Element from 'element-ui'
+import Lockr from 'Lockr'
 import axios from 'axios'
+import moment from 'moment'
 import utill from './assets/js/util.js'
 import store from './vuex/store'
 import filter from './assets/js/utils/fitter.js'
@@ -18,14 +20,19 @@ const router = new VueRouter({
 	routes
 })
 
+axios.defaults.timeout = 1000 * 15
+axios.defaults.headers.authKey = Lockr.get('authKey')
+axios.defaults.headers.sessionId = Lockr.get('sessionId')
+axios.defaults.headers['Content-Type'] = 'application/json'
 
 Vue.use(Element)
 Vue.use(VueRouter)
 
-Vue.prototype.$http = axios
-Vue.prototype.$utill = utill
-Vue.prototype.$store = store
-Vue.prototype.router = router
+window.$http = axios
+window.$utill = utill
+window.$store = store
+window.router = router
+window.moment = moment
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */

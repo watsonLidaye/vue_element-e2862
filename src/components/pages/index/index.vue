@@ -13,11 +13,11 @@
 			}
 		},
 		created(){
-			console.log(this.$utill)
-			console.log(this.$store)
-			this.$store.commit('user', {'name': '王刚'})
+			console.log($utill)
+			console.log($store)
+			$store.commit('user', {'name': '王刚'})
 			console.log('-----------------------------------')
-			console.log(this.$store.state.user)
+			console.log($store.state.user)
 		}
 	}
 </script>

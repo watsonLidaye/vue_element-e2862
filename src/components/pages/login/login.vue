@@ -13,11 +13,7 @@
 			}
 		},
 		created(){
-			console.log(this.$utill)
-			console.log(this.$store)
-			this.$store.commit('user', {'name': '李四'})
-			console.log('-----------------------------------')
-			console.log(this.$store.state.user)
+
 		}
 	}
 </script>
