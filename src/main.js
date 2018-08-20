@@ -36,21 +36,22 @@ window.moment = moment
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */
+// router.beforeEach((to, from, next) => {
+// 	console.log(to)
+// 	console.log(from)
+// })
+// router.afterEach((to, from) => {
+// 	console.log(to)
+// 	console.log(from)
+// })
+console.log(router)
 new Vue({
 	el: '#app',
-	router,
+	router: router,
 	components: {
 		App
 	},
 	template: '<App/>',
 	filters: filter,
-})
+}).$mount('#app')
 //进入页面的通用方法
-router.beforeEach((to, from) => {
-	console.log(to)
-	console.log(from)
-})
-router.afterEach((to, from) => {
-	console.log(to)
-	console.log(from)
-})
